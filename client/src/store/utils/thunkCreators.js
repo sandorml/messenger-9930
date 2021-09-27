@@ -141,7 +141,6 @@ export const readMessage =
   (conversationId, userId, local, isActiveChat) => async (dispatch) => {
     await axios.patch("/api/conversations/read", {
       conversationId: conversationId,
-      userId: userId,
     });
 
     // Send notification to the other party about msg read
